@@ -4,34 +4,32 @@ body
     color: rgb(95, 95, 255);
     color: aliceblue;
     font-family: 'Roboto Thin' ,sans-serif;
+    text-align: center;
 }
 
-.button 
+img
 {
-    width: 40%;
-    font-size: 3rem;
-    color: white;
-    border: 0px solid red;
-    background-color: black;
-    padding: 7px;
+    width: 800px;
     border-radius: 10px;
 }
 
-.button:hover
+.div_list_header
 {
-    background-color: orange;
-    color: black;
-}
-
-p
-{
+    width: 800px; 
+    background-color: lightgrey;
+    color: rgb(45,45,45);
+    border-radius:  10px;
     font-size: 200%;
+    margin: auto;
 }
 
-li 
+.div_list_content
 {
     font-size: 160%;
+    width: 800px;
+    margin: auto;
 }
+
 
 a
 {
@@ -44,17 +42,4 @@ a:hover
     color: orange;
 }
 
-button
-{
-    border-radius: 10px;
-    background-color: black;
-    color: aliceblue;
-    border: 2px solid black;
-}
 
-button:hover
-{
-    background: orange;
-    color: rgb(45, 45, 45);
-    border: 2px solid orange;
-}
