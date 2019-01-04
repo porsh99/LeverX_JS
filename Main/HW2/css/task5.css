@@ -126,62 +126,74 @@ body
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
  { 
-    #header_part
+     
+    *
     {
-        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    #header_part div
-    {
-        height: 10vh;
-    }
+   
     #header_part div:first-child
     {
-        width: 38vw;
-        display: inline-block;
-        margin-top: 1.3vh;
+        position: absolute;
         background-color: rgb(255, 82, 82);
+
+        height: 56vh;
+        width: 96vw;
+
+        margin-left: 2vw; 
+        margin-top: 12vh;
     }
     #header_part div:last-child
     {
-        width: 58vw;
-        align-self: right;
-        display: inline-block;
-        margin-left: 0.8vw; 
         background-color: rgb(255, 166, 82);
+
+        height: 10vh;
+        width: 38vw;
+        
+        margin-left: 2vw;
+        margin-top: 2vh;
     }
     #top_part
     {
         background: greenyellow;
-        height: 50vh;
-        width: 97.2vw;
-        margin-left: 0.85vw; 
-        margin-top: 2.9vh;
-    }
-    #middle_part div
-    {
-        display: inline-block;
+
+        position: absolute;
+       
         height: 26vh;
-        width: 31.7vw;
-        margin-right: 0.8vw;
-    }
-    #middle_part
-    {
-        width: 99vw;
-        margin-left: 0.3vw; 
-        margin-top: 3.5vh;
+        width: 47vw;
+
+        margin-top:60vh;
+        margin-left: 2vw;     
     }
     #middle_part div
     {
         background-color:rgb(75, 75, 247);
+
+        position: absolute;
+
+        height: 26vh;
+        width: 47vw;
+
+        margin-top:60vh;
+        margin-left: 51vw;
     }
     #middle_part div:first-child
     {
-        background-color:rgb(151, 116, 0);
         visibility: collapse;
     }
     #middle_part div:last-child
     {
         background-color:rgb(228, 118, 255);
+
+        position: absolute;
+
+        width: 56vw;
+        height: 10vh;
+
+        margin-top: -10vh;
+        margin-left: 42vw;
     }
  }
 
