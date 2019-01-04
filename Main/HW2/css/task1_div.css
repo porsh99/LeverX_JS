@@ -59,7 +59,6 @@ body
 }
 #bottom_part div
 {
-    margin:auto;
     display: inline-block;
     height: 26vh;
     background-color: lightgray;
@@ -69,7 +68,6 @@ body
 }
 #bottom_part div:first-child
 {
-    margin:auto;
     display: inline-block;
     margin-left:  0vw;
     margin-right: 0.8vw;
