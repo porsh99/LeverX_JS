@@ -1,0 +1,190 @@
+body
+{
+    background-color: rgb(45, 45, 45);
+    color: aliceblue;
+    font-family: 'Roboto Thin' ,sans-serif;
+    text-align: center;
+}
+
+
+@media screen and (min-device-width: 1080px)
+ {
+  
+    #header_part
+    {
+        width: 100%;
+    }
+    #header_part div
+    {
+        height: 10vh;
+    }
+    #header_part div:first-child
+    {
+        width: 38vw;
+        display: inline-block;
+        margin-top: 1.3vh;
+        background-color: rgb(255, 82, 82);
+    }
+    #header_part div:last-child
+    {
+        width: 58vw;
+        align-self: right;
+        display: inline-block;
+        margin-left: 0.8vw; 
+        background-color: rgb(255, 166, 82);
+    }
+    #top_part
+    {
+        background: greenyellow;
+        height: 50vh;
+        width: 97.2vw;
+        margin-left: 0.85vw; 
+        margin-top: 2.9vh;
+    }
+    #middle_part div
+    {
+        display: inline-block;
+        height: 26vh;
+        width: 31.7vw;
+        margin-right: 0.8vw;
+    }
+    #middle_part
+    {
+        width: 99vw;
+        margin-left: 0.3vw; 
+        margin-top: 3.5vh;
+    }
+    #middle_part div
+    {
+        background-color:rgb(75, 75, 247);
+    }
+    #middle_part div:first-child
+    {
+        background-color:rgb(151, 116, 0);
+    }
+    #middle_part div:last-child
+    {
+        background-color:rgb(228, 118, 255);
+    }
+    
+  }
+
+  @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) 
+{ 
+
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #header_part
+    {   
+        margin-bottom: 0;
+        margin: 2vh;
+    }
+    #header_part div:first-child
+    {
+        height: 40vh;
+        visibility: visible;
+        width: 52.2vh;
+       
+        background-color: rgb(255, 82, 82);
+
+        position: absolute;
+        bottom: 35vh;
+
+    }
+    #header_part div:last-child
+    {
+       visibility: collapse;
+       
+    }
+    #top_part
+    {
+        background: greenyellow;
+        height: 10vh;
+        margin: 2vh;
+    }
+   
+    #middle_part
+    {
+        margin: 2vh;
+    }
+    #middle_part div
+    {     
+        visibility: collapse;
+    }
+    #middle_part div:last-child 
+    {
+        visibility: visible;
+        background-color:rgb(228, 118, 255);
+        height: 10vh;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
+ { 
+    #header_part
+    {
+        width: 100%;
+    }
+    #header_part div
+    {
+        height: 10vh;
+    }
+    #header_part div:first-child
+    {
+        width: 38vw;
+        display: inline-block;
+        margin-top: 1.3vh;
+        background-color: rgb(255, 82, 82);
+    }
+    #header_part div:last-child
+    {
+        width: 58vw;
+        align-self: right;
+        display: inline-block;
+        margin-left: 0.8vw; 
+        background-color: rgb(255, 166, 82);
+    }
+    #top_part
+    {
+        background: greenyellow;
+        height: 50vh;
+        width: 97.2vw;
+        margin-left: 0.85vw; 
+        margin-top: 2.9vh;
+    }
+    #middle_part div
+    {
+        display: inline-block;
+        height: 26vh;
+        width: 31.7vw;
+        margin-right: 0.8vw;
+    }
+    #middle_part
+    {
+        width: 99vw;
+        margin-left: 0.3vw; 
+        margin-top: 3.5vh;
+    }
+    #middle_part div
+    {
+        background-color:rgb(75, 75, 247);
+    }
+    #middle_part div:first-child
+    {
+        background-color:rgb(151, 116, 0);
+        visibility: collapse;
+    }
+    #middle_part div:last-child
+    {
+        background-color:rgb(228, 118, 255);
+    }
+ }
+
+
+
+
