@@ -1,7 +1,7 @@
 start();
 
 function start() {
-	var userName = prompt("Input your name");
+	var userName = prompt("Input your username");
 	var isNumbersInUserName = checkForNumbers(userName);
 
 	if (isNumbersInUserName) {
@@ -9,6 +9,7 @@ function start() {
 	} else {
 		alert(reverseStr(userName));
 	}
+	window.location.href='index.html';
 }
 
 function checkForNumbers(itemElem) {
