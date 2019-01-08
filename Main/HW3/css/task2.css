@@ -10,46 +10,51 @@ body {
     background-color: aliceblue;
     color: aliceblue;
     font-family: 'Roboto Thin' ,sans-serif;
-    font-size: 10vh;
+    font-size: 6vh;
     font-weight: bold;
     padding: 1%;
 }
 
-.grid-container {
-    display: inline-grid;
-    grid-row-gap: 2%;
-    grid-column-gap: 1%;
+grid-container {
+    display: grid;
+    grid-column-gap: 50px 100px;
+    grid-row-gap: 1%;
+    grid-column-gap: 0.5%;
     height: 100%;
-    grid-template-columns: 30fr 30fr 11fr 11fr;
+    grid-template-columns: 30fr 30fr 20fr 20fr;
     grid-template-rows: 16fr 16fr 16fr 35fr 35fr;
 }
 
-.grid-container div {
-    border: 0.3vh solid red;
-}
-
-.item1 {
-
-    background-color: rgb(87, 189, 126);
-}
-.item2 {
-    background-color: rgb(224, 226, 121);
-}
-.item3 {
-    background-color: rgb(106, 255, 243);
-}
-.item4 {
-    background-color: rgb(195, 106, 255);
-}
-.item5 {
-    background-color: rgb(122, 243, 132);
-}
-.item6 {
-    background-color: rgb(255, 196, 68);
-}
 grid-item
 {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    border: 2px solid darkred;
+    background-color: rgb(167, 166, 166);
 }
+  
+
+
+   grid-item:nth-child(1),  grid-item:nth-child(4),  grid-item:nth-child(12),  grid-item:nth-child(16)
+  {
+      background: rgb(236, 215, 92);
+  } 
+  grid-item:nth-child(2),  grid-item:nth-child(8),  grid-item:nth-child(15)
+  {
+      background: rgb(92, 102, 236);
+  } 
+  grid-item:nth-child(5),  grid-item:nth-child(7),  grid-item:nth-child(13)
+  {
+      background: rgb(121, 236, 92);
+  }
+  grid-item:nth-child(3),  grid-item:nth-child(9),  grid-item:nth-child(10),  grid-item:nth-child(17)
+  {
+      background: rgb(236, 145, 92);
+  } 
+  grid-item:nth-child(6),  grid-item:nth-child(18),  grid-item:nth-child(20)
+  {
+      background: rgb(202, 92, 236);
+  }
+
