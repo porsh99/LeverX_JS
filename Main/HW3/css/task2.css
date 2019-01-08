@@ -1,0 +1,55 @@
+*
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    color: aliceblue;
+    font-family: 'Roboto Thin' ,sans-serif;
+    font-size: 10vh;
+    font-weight: bold;
+    padding: 1%;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-row-gap: 2%;
+    grid-column-gap: 1%;
+    height: 100%;
+    grid-template-columns: 30fr 30fr 11fr 11fr;
+    grid-template-rows: 16fr 16fr 16fr 35fr 35fr;
+}
+
+.grid-container div {
+    border: 0.3vh solid red;
+}
+
+.item1 {
+
+    background-color: rgb(87, 189, 126);
+}
+.item2 {
+    background-color: rgb(224, 226, 121);
+}
+.item3 {
+    background-color: rgb(106, 255, 243);
+}
+.item4 {
+    background-color: rgb(195, 106, 255);
+}
+.item5 {
+    background-color: rgb(122, 243, 132);
+}
+.item6 {
+    background-color: rgb(255, 196, 68);
+}
+text
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
