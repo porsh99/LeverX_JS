@@ -13,15 +13,20 @@ body {
 }
 
 .header-container {
+    
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     min-height: 100px;
+    width: 100%;
 
     flex-wrap: wrap;
+    z-index: 1;
 
+    background: white;
     box-shadow: 0px 3px rgba(0, 0, 0, 0.137);
 
+    position: fixed;
     /* border: 1px solid red; */
 }
 
@@ -147,6 +152,7 @@ input:last-child {
 
 .content-container {
     display: flex;
+    padding-top: 100px;
 
     justify-content: space-around;
     flex-wrap: wrap;
@@ -189,10 +195,15 @@ input:last-child {
     padding: 1em;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
+    opacity: 0.7;
 }
 
-.card-header text {
+.card-header-text {
     font-size: 1.8em;
+    position: absolute;
+    width: 430px;
+    margin-left: 10px;
+    margin-top: -170px;
 }
 
 .card-desc {
