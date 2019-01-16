@@ -5,6 +5,20 @@
       "data": {
         "name": "BOPF",
         "science": "Programming",
+        "pagesCount": "577",
+        "publicher": "LeverX inc.",
+        "hindingType": "hard",
+        "avaliability": "for company employees",
+        "author": "Incognito",
+        "onCD": true,
+        "onDVD": true
+      }
+    },
+    {
+      "id": "1",
+      "data": {
+        "name": "BOPF",
+        "science": "Programming",
         "pagesCount": "544",
         "publicher": "LeverX inc.",
         "hindingType": "middle",
@@ -15,7 +29,7 @@
       }
     },
     {
-      "id": "1",
+      "id": "2",
       "data": {
         "name": "BOPF",
         "science": "Programming",

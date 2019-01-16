@@ -202,11 +202,14 @@ function UpdateData() {
     dataToUpdate.id = rowID;
     dataToUpdate.data = book;
 
-    //console.log(book);
     alert(JSON.stringify(dataToUpdate) + " data to update");
 
-    xhr.open('PUT', 'http://localhost:3000/books/' + rowID);
+    console.log(JSON.stringify(dataToUpdate));
 
+    
+
+    xhr.open('PUT', 'http://localhost:3000/books/' + rowID);
+    xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(JSON.stringify(dataToUpdate));
 }
 
