@@ -26,6 +26,8 @@ function serializeBookFromForm() {
     var book_serialize = moc.SerializeBOOK(book);
     var book_deserialize_object = moc.DeserializeBook(book_serialize);
 
+    console.log(book_serialize);
+
     alert("Serialize object in JSON format:\n" + book_serialize + "\n\nDeserialize BOOK object:" + book_deserialize_object.toString());
 }
 
@@ -58,6 +60,8 @@ function serializeAudiBookFromForm() {
     var bookSerialize = moc.SerializeAudioBOOK(audioBook);
     var bookDeserializeObject = moc.DeserializeAudioBook(bookSerialize);
 
+    console.log(bookSerialize);
+
     alert("Serialize object in JSON format:\n" + bookSerialize + "\n\nDeserialize Audio BOOK object:" + bookDeserializeObject.toString());
 }
 
@@ -89,6 +93,8 @@ function serializeTextBookFromForm() {
 
     var bookSerialize = moc.SerializeTextBOOK(audioBook);
     var bookDeserializeObject = moc.DeserializeTextBook(bookSerialize);
+
+    console.log(bookSerialize);
 
     alert("Serialize object in JSON format:\n" + bookSerialize + "\n\nDeserialize Text BOOK object:" + bookDeserializeObject.toString());
 }

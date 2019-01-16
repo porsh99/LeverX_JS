@@ -1,0 +1,79 @@
+{
+  "books": [
+    {
+      "id": "0",
+      "data": {
+        "name": "BOPF",
+        "science": "Programming",
+        "pagesCount": "544",
+        "publicher": "LeverX inc.",
+        "hindingType": "middle",
+        "avaliability": "for company employees",
+        "author": "Incognito",
+        "onCD": true,
+        "onDVD": false
+      }
+    },
+    {
+      "id": "1",
+      "data": {
+        "name": "BOPF",
+        "science": "Programming",
+        "pagesCount": "544",
+        "publicher": "LeverX inc.",
+        "hindingType": "middle",
+        "avaliability": "for company employees",
+        "author": "Incognito",
+        "onCD": true,
+        "onDVD": false
+      }
+    }
+  ],
+  "audioBooks": [
+    {
+      "id": "1",
+      "data": {
+        "name": "ASP.NET",
+        "science": "Programming",
+        "pagesCount": "768",
+        "publicher": "LeverX inc.",
+        "hindingType": "light",
+        "avaliability": "for company employees",
+        "author": "Incognito",
+        "onCD": false,
+        "onDVD": true,
+        "audioFormat": ".flac"
+      }
+    },
+    {
+      "id": "2",
+      "data": {
+        "name": "2ASP.NET",
+        "science": "Programming",
+        "pagesCount": "768",
+        "publicher": "LeverX inc.",
+        "hindingType": "light",
+        "avaliability": "for company employees",
+        "author": "Incognito",
+        "onCD": false,
+        "onDVD": true,
+        "audioFormat": ".flac"
+      }
+    },
+    {
+      "id": "3",
+      "data": {
+        "name": "3ASP.NET",
+        "science": "Programming",
+        "pagesCount": "768",
+        "publicher": "LeverX inc.",
+        "hindingType": "light",
+        "avaliability": "for company employees",
+        "author": "Incognito",
+        "onCD": false,
+        "onDVD": true,
+        "audioFormat": ".flac"
+      }
+    }
+  ]
+}
