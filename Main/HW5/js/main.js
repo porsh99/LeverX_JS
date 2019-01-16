@@ -90,7 +90,7 @@ function serializeTextBookFromForm() {
     var bookSerialize = moc.SerializeTextBOOK(audioBook);
     var bookDeserializeObject = moc.DeserializeTextBook(bookSerialize);
 
-    alert("Serialize object in JSON format:\n" + bookSerialize + "\n\nDeserialize Audio BOOK object:" + bookDeserializeObject.toString());
+    alert("Serialize object in JSON format:\n" + bookSerialize + "\n\nDeserialize Text BOOK object:" + bookDeserializeObject.toString());
 }
 
 
