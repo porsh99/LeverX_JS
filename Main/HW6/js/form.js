@@ -6,8 +6,7 @@ var rowID = 0;
 var xhr = new XMLHttpRequest();
 
 function Start() {
-    var name = document.getElementById("book_name");
-
+    
     var url_string = window.location.href;
     var url = new URL(url_string);
     rowID = url.searchParams.get("rowID");
@@ -34,7 +33,7 @@ function LoadDataToForm(rowID) {
 
             var bookTableElement = JSON.parse(xhr.responseText);
 
-           // console.log(bookTableElement);
+            // console.log(bookTableElement);
 
             book = moc.GetBookFromObject(bookTableElement.data);
             console.log(book);
@@ -193,28 +192,36 @@ function UpdateData() {
 
     UpdateBookData();
 
-    var DataToUpdate = function(){
-        this.id;
-        this.data;
+    var DataToUpdate = function (_id, _data) {
+        this.id = _id;
+        this.data = _data;
     }
 
-    var dataToUpdate = new DataToUpdate();
-    dataToUpdate.id = rowID;
-    dataToUpdate.data = book;
+    var dataToUpdate = new DataToUpdate(rowID, book);
 
-    alert(JSON.stringify(dataToUpdate) + " data to update");
+    if (mode === "edit")
+    {
+        xhr.open('PUT', 'http://localhost:3000/books/' + rowID);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify(dataToUpdate));
 
-    console.log(JSON.stringify(dataToUpdate));
+        alert("Update row");
+    }
+    else if (mode === "add")
+    {
+        xhr.open('POST', 'http://localhost:3000/books');
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify(dataToUpdate));
 
-    
-
-    xhr.open('PUT', 'http://localhost:3000/books/' + rowID);
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send(JSON.stringify(dataToUpdate));
+        alert("Add new row");
+    }
+    else
+    {
+        alert('Error: incorent MODE of work');
+    }
 }
 
-function UpdateBookData()
-{
+function UpdateBookData() {
     var name = document.getElementById("book_name").value;
     var science = document.getElementById("book_science").value;
     var pagesCount = document.getElementById("book_count_of_pages").value;
@@ -235,4 +242,9 @@ function UpdateBookData()
     }
 
     book = new Book(name, science, pagesCount, publisherName, hindingType, avaliability, authorName, onCD, onDVD);
+}
+
+function GoBack()
+{
+    window.location.href = "index.html";
 }

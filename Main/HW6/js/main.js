@@ -1,6 +1,7 @@
 var books = [];
 var moc = new MOC();
 var xhr = new XMLHttpRequest();
+var booksTable;
 
 
 function LoadBooks() {
@@ -14,11 +15,11 @@ function LoadBooks() {
         alert(xhr.status + ': ' + xhr.statusText);
     } else {
 
-        var booksTable = JSON.parse(xhr.responseText);
+        booksTable = JSON.parse(xhr.responseText);
 
         for (var i = 0; i < booksTable.length; i++) {
             books.push(moc.GetBookFromObject(booksTable[i].data));
-            tableBooks.appendChild(GetRowToBookTable(books[i], i));
+            tableBooks.appendChild(GetRowToBookTable(books[i], booksTable[i].id));
         }
 
         console.log(books);
@@ -187,14 +188,27 @@ function GetDeleteTD(rowID) {
 
 
 function EditRow(rowID) {
-    //alert("Edit row " + rowID);
-
-    var a="form.html";
-
-    rowID=rowID;
-    window.open(a+'?rowID='+ rowID + '&&mode=edit',"");
+    var a = "form.html";
+    rowID = rowID;
+    window.location.href = (a + '?rowID=' + rowID + '&&mode=edit');
 }
 
 function DeleteRow(rowID) {
-    alert("Delete row " + rowID);
+    var delRow = confirm("Do you want to delete row?");
+    if (delRow) {
+        xhr.open('DELETE', 'http://localhost:3000/books/' + rowID);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send();
+    }
+}
+
+function AddBook() {
+    var maxID = 0;
+    for (var i = 0; i < booksTable.length; i++) {
+        if (maxID < booksTable[i].id)
+            maxID = booksTable[i].id;
+    }
+
+    var a = "form.html";
+    window.location.href = (a + '?rowID=' + ++maxID + '&&mode=add');
 }

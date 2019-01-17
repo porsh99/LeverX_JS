@@ -3,13 +3,13 @@
     {
       "id": "0",
       "data": {
-        "name": "BOPF",
-        "science": "Programming",
-        "pagesCount": "577",
-        "publicher": "LeverX inc.",
-        "hindingType": "hard",
+        "name": "ASP.NET",
+        "science": "Web + C#",
+        "pagesCount": "768",
+        "publicher": "not found",
+        "hindingType": "light",
         "avaliability": "for company employees",
-        "author": "Incognito",
+        "author": "123",
         "onCD": true,
         "onDVD": true
       }
@@ -17,14 +17,14 @@
     {
       "id": "1",
       "data": {
-        "name": "BOPF",
-        "science": "Programming",
-        "pagesCount": "544",
+        "name": "SAP HANA CLOUD",
+        "science": "Web + ABAP",
+        "pagesCount": "1343",
         "publicher": "LeverX inc.",
-        "hindingType": "middle",
-        "avaliability": "for company employees",
+        "hindingType": "hard",
+        "avaliability": "for everyone",
         "author": "Incognito",
-        "onCD": true,
+        "onCD": false,
         "onDVD": false
       }
     },
@@ -40,53 +40,48 @@
         "author": "Incognito",
         "onCD": true,
         "onDVD": false
-      }
-    }
-  ],
-  "audioBooks": [
-    {
-      "id": "1",
-      "data": {
-        "name": "ASP.NET",
-        "science": "Programming",
-        "pagesCount": "768",
-        "publicher": "LeverX inc.",
-        "hindingType": "light",
-        "avaliability": "for company employees",
-        "author": "Incognito",
-        "onCD": false,
-        "onDVD": true,
-        "audioFormat": ".flac"
-      }
-    },
-    {
-      "id": "2",
-      "data": {
-        "name": "2ASP.NET",
-        "science": "Programming",
-        "pagesCount": "768",
-        "publicher": "LeverX inc.",
-        "hindingType": "light",
-        "avaliability": "for company employees",
-        "author": "Incognito",
-        "onCD": false,
-        "onDVD": true,
-        "audioFormat": ".flac"
       }
     },
     {
       "id": "3",
       "data": {
-        "name": "3ASP.NET",
-        "science": "Programming",
-        "pagesCount": "768",
-        "publicher": "LeverX inc.",
+        "name": "123",
+        "science": "123",
+        "pagesCount": "123",
+        "publicher": "not found",
         "hindingType": "light",
-        "avaliability": "for company employees",
-        "author": "Incognito",
+        "avaliability": "123",
+        "author": "123",
         "onCD": false,
-        "onDVD": true,
-        "audioFormat": ".flac"
+        "onDVD": false
+      }
+    },
+    {
+      "id": "4",
+      "data": {
+        "name": "123",
+        "science": "Programming",
+        "pagesCount": "110",
+        "publicher": "123",
+        "hindingType": "light",
+        "avaliability": "123",
+        "author": "123",
+        "onCD": true,
+        "onDVD": true
+      }
+    },
+    {
+      "id": "5",
+      "data": {
+        "name": "test",
+        "science": "test",
+        "pagesCount": "test",
+        "publicher": "test",
+        "hindingType": "light",
+        "avaliability": "test",
+        "author": "test",
+        "onCD": true,
+        "onDVD": true
       }
     }
   ]

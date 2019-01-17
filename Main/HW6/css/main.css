@@ -39,6 +39,7 @@ table
     border: 2px solid orange;
     border-radius: 10px;
     background-color: orange;
+    border-top-left-radius: 0px;
 }
 
 td
@@ -52,6 +53,23 @@ td
     color: rgb(45, 45, 45);
 }
 
+#but-add-row
+{
+    border:0px solid red;
+    height: 26px;
+    margin-top: 119px;
+    text-decoration: underline;
+
+    background: orange;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: rgb(45, 45, 45);
+}
+
+#but-add-row:hover{
+    background: rgb(105, 105, 105);
+    color: aliceblue;
+}
 
 
 
