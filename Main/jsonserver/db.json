@@ -31,39 +31,11 @@
     {
       "id": "2",
       "data": {
-        "name": "BOPF",
-        "science": "Programming",
-        "pagesCount": "544",
-        "publicher": "LeverX inc.",
+        "name": "test",
+        "science": "test",
+        "pagesCount": "test",
+        "publicher": "test",
         "hindingType": "middle",
-        "avaliability": "for company employees",
-        "author": "Incognito",
-        "onCD": true,
-        "onDVD": false
-      }
-    },
-    {
-      "id": "3",
-      "data": {
-        "name": "123",
-        "science": "123",
-        "pagesCount": "123",
-        "publicher": "not found",
-        "hindingType": "light",
-        "avaliability": "123",
-        "author": "123",
-        "onCD": false,
-        "onDVD": false
-      }
-    },
-    {
-      "id": "4",
-      "data": {
-        "name": "123",
-        "science": "Programming",
-        "pagesCount": "110",
-        "publicher": "123",
-        "hindingType": "light",
         "avaliability": "123",
         "author": "123",
         "onCD": true,
@@ -71,15 +43,15 @@
       }
     },
     {
-      "id": "5",
+      "id": "3",
       "data": {
-        "name": "test",
-        "science": "test",
-        "pagesCount": "test",
-        "publicher": "test",
+        "name": "dshgfsjhag",
+        "science": "hsdgfkjhsag",
+        "pagesCount": "dsjhfgdakjh",
+        "publicher": "dsajhfga",
         "hindingType": "light",
-        "avaliability": "test",
-        "author": "test",
+        "avaliability": "sdjfhg",
+        "author": "sdajhfg",
         "onCD": true,
         "onDVD": true
       }
