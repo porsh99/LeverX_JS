@@ -13,6 +13,9 @@ sap.ui.define([
              "id": "app"
           }
        },
+       metadata : {
+         manifest: "json"
+   },
        init : function () {
           // call the init function of the parent
           UIComponent.prototype.init.apply(this, arguments);
