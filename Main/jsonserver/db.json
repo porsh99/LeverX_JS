@@ -55,6 +55,20 @@
         "onCD": true,
         "onDVD": true
       }
+    },
+    {
+      "id": "4",
+      "data": {
+        "name": "test",
+        "science": "test",
+        "pagesCount": "test",
+        "publicher": "test",
+        "hindingType": "hard",
+        "avaliability": "123",
+        "author": "123",
+        "onCD": true,
+        "onDVD": true
+      }
     }
   ]
 }
