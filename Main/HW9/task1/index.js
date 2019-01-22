@@ -10,7 +10,13 @@ sap.ui.require([
 		var oModel = new JSONModel({
 			firstName: "Kladov",
 			lastName: "Alexey",
-			enabled: true,
+            enabled: true,
+            address: {
+				street: "Dietmar-Hopp-Allee 16",
+				city: "Walldorf",
+				zip: "69190",
+				country: "Germany"
+			}
         });
 
         sap.ui.getCore().setModel(oModel);
