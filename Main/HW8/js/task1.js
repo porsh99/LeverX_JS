@@ -1,17 +1,75 @@
 var data = [];
 
 function start() {
-
     butGet();
-
 }
 
-function butGet(){
+function butGet() {
     clearTableData();
-     if (getInfo()) {
-         upDataToTable(data);
-     }
+    if (getInfo()) {
+        upDataToTable(data);
+        //show("Load complete", true);
+    }
 }
+
+function butSelect() {
+    clearTableData();
+    if (getInfoWithSelect()) {
+        upDataToTable(data);
+    }
+}
+
+function butCount() {
+    var count = getCount();
+    if (count != -1)
+        show("Count of Airlines = " + count, true);
+}
+
+function butExpand()
+{
+    show("Sorry it doesn't work.", true);
+}
+
+function butOrderBy()
+{
+    clearTableData();
+    if (getInfoWithOrderBy()) {
+        upDataToTable(data);
+    }
+}
+
+function butSearch()
+{
+    clearTableData();
+    if (getInfoWithSearchNamePart()) {
+        upDataToTable(data);
+    }
+}
+
+function butSkip()
+{
+    clearTableData();
+    if (getInfoWithSkip()) {
+        upDataToTable(data);
+    }
+}
+
+function butTop()
+{
+    clearTableData();
+    if (getInfoWithTop()) {
+        upDataToTable(data);
+    }
+}
+
+function butFilter()
+{
+    clearTableData();
+    if (getInfoWithFilter()) {
+        upDataToTable(data);
+    }
+}
+
 
 
 function getInfo() {
@@ -20,7 +78,7 @@ function getInfo() {
     $.ajax({
         type: "get",
         async: false,
-        url: "https://services.odata.org/V4/TripPinServiceRW",
+        url: "https://services.odata.org/V4/(S(4idfi5ct034lf3uarchiewav))/TripPinServiceRW/Airlines?$select=AirlineCode,Name",
         success: function (_data) {
             data = _data.value;
             show("GET - Load data sucsess");
@@ -33,18 +91,129 @@ function getInfo() {
     return resRequest;
 }
 
-function butCount() {
+function getInfoWithSelect() {
 
     var resRequest = false;
     $.ajax({
         type: "get",
         async: false,
-        url: "https://services.odata.org/V4/TripPinServiceRW/?$select=value",
+        url: "https://services.odata.org/V4/(S(4idfi5ct034lf3uarchiewav))/TripPinServiceRW/Airlines?$select=AirlineCode",
         success: function (_data) {
-            
-            show("GET COUNT - Load data sucsess" + _data);
+            data = _data.value;
+            show("GET - Load data sucsess");
+            resRequest = true;
+        },
+        error: function (xhr, textStatus, errorMessage) {
+            show("ERROR: " + errorMessage);
+        }
+    });
+    return resRequest;
+}
 
-            show(_data);
+function getCount() {
+
+    var count = -1;
+    $.ajax({
+        type: "get",
+        async: false,
+        url: "https://services.odata.org/V4/TripPinServiceRW/Airlines/$count",
+        success: function (_data) {
+            show("GET - Load data COUNT sucsess");
+            count = _data;
+        },
+        error: function (xhr, textStatus, errorMessage) {
+            show("ERROR: " + errorMessage);
+        }
+    });
+    return count;
+}
+
+function getInfoWithOrderBy() {
+
+    var resRequest = false;
+    $.ajax({
+        type: "get",
+        async: false,
+        url: "https://services.odata.org/V4/(S(4idfi5ct034lf3uarchiewav))/TripPinServiceRW/Airlines?$orderby=Name",
+        success: function (_data) {
+            data = _data.value;
+            show("GET - Load data sucsess");
+            resRequest = true;
+        },
+        error: function (xhr, textStatus, errorMessage) {
+            show("ERROR: " + errorMessage);
+        }
+    });
+    return resRequest;
+}
+
+function getInfoWithSearchNamePart() {
+
+    var resRequest = false;
+    $.ajax({
+        type: "get",
+        async: false,
+        url: "https://services.odata.org/V4/(S(4idfi5ct034lf3uarchiewav))/TripPinServiceRW/Airlines?$search=China",
+        success: function (_data) {
+            data = _data.value;
+            show("GET - Load data sucsess");
+            resRequest = true;
+        },
+        error: function (xhr, textStatus, errorMessage) {
+            show("ERROR: " + errorMessage);
+        }
+    });
+    return resRequest;
+}
+
+function getInfoWithSkip() {
+
+    var resRequest = false;
+    $.ajax({
+        type: "get",
+        async: false,
+        url: "https://services.odata.org/V4/(S(4idfi5ct034lf3uarchiewav))/TripPinServiceRW/Airlines?$skip=8",
+        success: function (_data) {
+            data = _data.value;
+            show("GET - Load data sucsess");
+            resRequest = true;
+        },
+        error: function (xhr, textStatus, errorMessage) {
+            show("ERROR: " + errorMessage);
+        }
+    });
+    return resRequest;
+}
+
+function getInfoWithTop() {
+
+    var resRequest = false;
+    $.ajax({
+        type: "get",
+        async: false,
+        url: "https://services.odata.org/V4/(S(4idfi5ct034lf3uarchiewav))/TripPinServiceRW/Airlines?$top=4",
+        success: function (_data) {
+            data = _data.value;
+            show("GET - Load data sucsess");
+            resRequest = true;
+        },
+        error: function (xhr, textStatus, errorMessage) {
+            show("ERROR: " + errorMessage);
+        }
+    });
+    return resRequest;
+}
+
+function getInfoWithFilter() {
+
+    var resRequest = false;
+    $.ajax({
+        type: "get",
+        async: false,
+        url: "https://services.odata.org/V4/(S(4idfi5ct034lf3uarchiewav))/TripPinServiceRW/Airlines?$filter=endswith(Name, 'Airlines')",
+        success: function (_data) {
+            data = _data.value;
+            show("GET - Load data sucsess");
             resRequest = true;
         },
         error: function (xhr, textStatus, errorMessage) {
@@ -63,9 +232,8 @@ function upDataToTable(_data) {
 
 function getRowToDataTable(dataElement) {
     var row = document.createElement("tr");
-    row.appendChild(getTD(dataElement.name));
-    row.appendChild(getTD(dataElement.kind));
-    row.appendChild(getTD(dataElement.url));
+    row.appendChild(getTD(dataElement.AirlineCode));
+    row.appendChild(getTD(dataElement.Name));
 
     return row;
 }
@@ -77,17 +245,18 @@ function getTD(value) {
 }
 
 
-function show(value)
-{
-    console.log(value);
+function show(value, isAlert) {
+    if (!isAlert) {
+        console.log(value);
+    } else {
+        alert(value);
+    }
 }
 
-function clearTableData()
-{
+function clearTableData() {
     var table = document.getElementById("table-data");
 
-    while(table.childElementCount != 1)
-    {
+    while (table.childElementCount != 2) {
         table.removeChild(table.lastChild);
     }
 }

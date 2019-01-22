@@ -14,11 +14,10 @@
 
 <body onload="start()">
     <table id="table-data">
-        <caption>Data table</caption>
+        <caption>Airlines</caption>
         <tr class="tr_header">
+            <th>AirlineCode</th>
             <th>Name</th>
-            <th>Kind</th>
-            <th>Url</th>
         </tr>
     </table>
     <div id="request-menu">
@@ -33,37 +32,37 @@
             </button>
         </div>
         <div class="buttons">
-            <button class="button" type="submit" onclick="butGet()">
+            <button class="button" type="submit" style="border: 1px solid red;" onclick="butExpand()">
                 EXPAND
             </button>
         </div>
         <div class="buttons">
-            <button class="button" type="submit" onclick="butGet()">
+            <button class="button" type="submit" onclick="butOrderBy()">
                 ORDERBY
             </button>
         </div>
         <div class="buttons">
-            <button class="button" type="submit" onclick="butGet()">
+            <button class="button" type="submit" onclick="butSearch()">
                 SEARCH
             </button>
         </div>
         <div class="buttons">
-            <button class="button" type="submit" onclick="butGet()">
+            <button class="button" type="submit" onclick="butSelect()">
                 SELECT
             </button>
         </div>
         <div class="buttons">
-            <button class="button" type="submit" onclick="butGet()">
+            <button class="button" type="submit" onclick="butSkip()">
                 SKIP
             </button>
         </div>
         <div class="buttons">
-            <button class="button" type="submit" onclick="butGet()">
+            <button class="button" type="submit" onclick="butTop()">
                 TOP
             </button>
         </div>
         <div class="buttons">
-            <button class="button" type="submit" onclick="butGet()">
+            <button class="button" type="submit" onclick="butFilter()">
                 FILTER
             </button>
         </div>
