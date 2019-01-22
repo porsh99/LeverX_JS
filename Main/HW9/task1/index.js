@@ -6,6 +6,9 @@ sap.ui.require([
 	"use strict";
 
 	sap.ui.getCore().attachInit(function () {
+        var oProductModel = new JSONModel();
+		oProductModel.loadData("./model/Products.json");
+		sap.ui.getCore().setModel(oProductModel, "products");
 
 		var oModel = new JSONModel({
 			firstName: "Kladov",
