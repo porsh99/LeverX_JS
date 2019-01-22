@@ -12,6 +12,6 @@ sap.ui.require([
 
 		sap.ui.getCore().setModel(oModel);
 
-		new Text({text: "Hi, my name is Harry Hawk"}).placeAt("content");
+		new Text({text: "{/greetingText}"}).placeAt("content");
 	});
 });
