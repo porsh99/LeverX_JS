@@ -78,7 +78,7 @@ function getInfo() {
     $.ajax({
         type: "get",
         async: false,
-        url: "https://services.odata.org/V4/(S(4idfi5ct034lf3uarchiewav))/TripPinServiceRW/Airlines?$select=AirlineCode,Name",
+        url: "https://services.odata.org/V4/(S(4idfi5ct034lf3uarchiewav))/TripPinServiceRW/Airlines?$select=AirlineCode,Name&&$orderby=AirlineCode&&$top=8",
         success: function (_data) {
             data = _data.value;
             show("GET - Load data sucsess");
@@ -210,7 +210,7 @@ function getInfoWithFilter() {
     $.ajax({
         type: "get",
         async: false,
-        url: "https://services.odata.org/V4/(S(4idfi5ct034lf3uarchiewav))/TripPinServiceRW/Airlines?$filter=endswith(Name, 'Airlines')",
+        url: "https://services.odata.org/V4/(S(4idfi5ct034lf3uarchiewav))/TripPinServiceRW/Airlines?$filter=Name eq 'American Airlines' or Name eq 'Turkish Airlines' or Name eq 'Emirates'",
         success: function (_data) {
             data = _data.value;
             show("GET - Load data sucsess");
