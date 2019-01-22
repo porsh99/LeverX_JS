@@ -28,6 +28,10 @@ function butCount() {
 function butExpand()
 {
     show("Sorry it doesn't work.", true);
+    // clearTableData();
+    // if (getInfoWithExpand()) {
+    //     upDataToTable(data);
+    // }
 }
 
 function butOrderBy()
@@ -126,6 +130,25 @@ function getCount() {
         }
     });
     return count;
+}
+
+function getInfoWithExpand() {
+
+    var resRequest = false;
+    $.ajax({
+        type: "get",
+        async: false,
+        url: "https://services.odata.org/V4/(S(4idfi5ct034lf3uarchiewav))/TripPinServiceRW/Airlines?$select=AirlineCode/Name&&$expand=AirlineCode",
+        success: function (_data) {
+            data = _data.value;
+            show("GET - Load data sucsess");
+            resRequest = true;
+        },
+        error: function (xhr, textStatus, errorMessage) {
+            show("ERROR: " + errorMessage);
+        }
+    });
+    return resRequest;
 }
 
 function getInfoWithOrderBy() {
