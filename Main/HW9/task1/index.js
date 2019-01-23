@@ -20,7 +20,8 @@ sap.ui.require([
 				zip: "69190",
 				country: "Germany"
 			},
-			"salesToDate" : 12345.6789,
+            "salesToDate" : 12345.6789,
+            "priceThreshold": 20,
 			"currencyCode" : "EUR"
         });
 
