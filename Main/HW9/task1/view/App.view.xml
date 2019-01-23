@@ -1,4 +1,5 @@
 <mvc:View
+    controllerName="sap.ui.demo.db.controller.App"
 	xmlns="sap.m"
     xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc">
@@ -47,7 +48,10 @@
 		<content>
 			<List headerText="{i18n>productListTitle}" items="{products>/Products}">
 				<items>
-					<ObjectListItem title="{products>ProductName}"
+					<ObjectListItem
+                    press=".onItemSelected"
+		            type="Active"
+                     title="{products>ProductName}"
 						number="{
 							parts: [
 								{path: 'products>UnitPrice'},
@@ -74,4 +78,25 @@
 			</List>
 		</content>
 	</Panel>
+    <Panel id="productDetailsPanel" headerText="{i18n>panel4HeaderText}" class="sapUiResponsiveMargin" width="auto">
+    <l:Grid defaultSpan="L3 M6 S12" containerQuery="true">
+        <Label text="{i18n>ProductID}:" />
+        <Input value="{products>ProductID}" />
+        
+        <Label text="{i18n>ProductName}:" />
+        <Input value="{products>ProductName}" />
+
+        <Label text="{i18n>QuantityPerUnit}:" />
+        <Input value="{products>QuantityPerUnit}" />
+        
+        <Label text="{i18n>UnitPrice}:" />
+        <Input value="{products>UnitPrice}" />
+        
+        <Label text="{i18n>UnitsInStock}:" />
+        <Input value="{products>UnitsInStock}" />
+        
+        <Label text="{i18n>Discontinued}:" />
+        <CheckBox selected="{products>Discontinued}" />
+    </l:Grid>    
+  </Panel>
 </mvc:View>
