@@ -10,13 +10,13 @@
 				id="ProductList"
 				headerText="{i18n>listHeaderText}"
 				items="{
-					path: 'products>/Products',
+					path: 'products>/value',
 					factory: '.productListFactory'
 				}">
 					<dependents>
 					<ObjectListItem
 						id="productExtended"
-						title="UserName:{products>FirstName}  LastName:{products>LastName} Gender:{products>Gender} "
+						title="UserName:{products>FirstName}  LastName:{products>LastName} Gender:{products>Gender}"
 						>
 					</ObjectListItem>
 				</dependents>
