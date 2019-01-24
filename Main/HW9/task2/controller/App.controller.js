@@ -6,7 +6,8 @@ sap.ui.define([
 		productListFactory: function (sId) {
 			var oUIControl;
 
-			oUIControl = this.byId("productExtended").clone(sId);
+			oUIControl = this.byId("listItem").clone(sId);
+			console.log(sId);
 
 			return oUIControl;
 		}
